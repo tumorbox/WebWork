@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+	<!-- 1. 함수 정의
+		1) 구구단 출력하는 함수
+			- 함수명 : printGuGu	
+			- 매개변수 : 단
+			- 함수에서 구현할 내용 : 매개변수로 전달되는 구구단을 		
+					      document.write로 출력하기
+		2) 숫자의 합을 리턴하는 함수(3번)
+			- 함수명 : calcNum
+			- 매개변수 : 숫자
+			- 함수에서 구현할 내용 : 매개변수로 전달되는 숫자의 합을 구해서 리턴
+	2. 함수의 호출
+		- button 한개 정의하고 이벤트핸들러에 연결  구구단 출력하기
+		- 구구단은 prompt로 출력할 단을 입력받아서 함수에 전달
+		- 실행하면 바로calcNum이 호출되도록
+	[alert에 출력 방식]
+	 입력한 숫자의 합은 : 
+ -->
+
+	<script type="text/javascript">
+		function printGuGu(dan){
+			for(i=1; i<10; i++){
+				result=dan*i;
+				document.write(dan+"*"+i+"="+result+"<br/>");
+			}
+		}
+		function calcNum(num1, num2){
+			return num1+num2;
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+	//dan = parseInt(window.prompt("원하는 단수를 입력하세요"));
+	num1 = parseInt(window.prompt("숫자를 입력하세요"));
+	num2 = parseInt(window.prompt("숫자를 입력하세요"));
+	result = calcNum(num1, num2);
+	alert("입력한 숫자의 합은 : "+result);
+	</script>
+	<input type="button" value="구구단하기 " onclick="printGuGu(window.prompt('원하는 단수를 입력하세요'))">
+</body>
+</html>

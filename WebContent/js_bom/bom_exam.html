@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="EUC-KR">
+	<title>Insert title here</title>
+		<script type="text/javascript">
+		
+		function bbb() {
+			num = myform.calc.value;
+			document.getElementById("result").innerHTML = "<h1>"+12900*(1-num/100)+"</h1>";
+			
+		}
+		
+		</script>
+</head>
+<body>
+	<form name="myform">
+		수량 : <input type="text" name="calc" onkeyup="bbb()"/>
+	</form>
+	<div id="result"></div>
+</body>
+</html>

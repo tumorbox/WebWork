@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+		today = new Date();
+		day = today.getDay();
+		
+		hour = today.getHours()
+		if(hour<12) {
+			document.bgColor="blue";
+		} else{
+			document.bgColor="skyblue";
+		}
+		
+		weekday="";	
+		switch (day) {
+		case 0:
+			weekday="일요일";
+			myimg = ".jpg";
+			document.write("<img src='../images/jang1"+myimg+"'/>")
+			break;
+		case 1:
+			weekday="월요일";
+			myimg = ".jpg";
+			document.write("<img src='../images/jang2"+myimg+"'/>")
+			break;
+		case 2:
+			weekday="화요일";
+			myimg = ".jpg";
+			document.write("<img src='../images/jang3"+myimg+"'/>")
+			break;
+		case 3:
+			weekday="수요일";
+			myimg = ".jpg";
+			document.write("<img src='../images/jang4"+myimg+"'/>")
+			break;
+		case 4:
+			weekday="목요일";
+			myimg = ".jpg";
+			document.write("<img src='../images/jang5"+myimg+"'/>")
+			break;
+		case 5:
+			weekday="금요일";
+			myimg = ".jpg";
+			document.write("<img src='../images/jang6"+myimg+"'/>")
+			break;
+		case 6:
+			weekday="토요일";
+			myimg = ".jpg";
+			document.write("<img src='../images/jang7"+myimg+"'/>")
+			break;
+		default:
+			break;
+		}
+		
+		str = str+weekday+hour;
+		document.write("<h2>"+str+"</h2>");
+	</script>
+
+
+
+
+</body>
+</html>

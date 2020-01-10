@@ -1,8 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		
+		//노란색 배경 newP의 p테그생성
+		//2. 삽입될 상위 노드를 구하기
+		//3. target노드에 새롭게 생성한 노드를 추가한다. - 하위노드로 추가
+		function insertP(){
+			
+			newtagNode = document.createElement("p");
+			newtagNode.setAttribute("style", "background-color:skyblue;");
+			textNode =document.createTextNode("newP");
+			newtagNode.appendChild(textNode);
+			targetNode = document.getElementById("root");
+			targetNode.appendChild(newtagNode);
+			
+		}
+		
+		//밑에서 부터 삭제
+		//2. 삭제할 노드를 구하기
+		//delNode = document.getElementById("btninsert");
+		//3. 삭제하기
+		function deleteP(){
+			targetNode = document.getElementById("root"); 
+			delNode = targetNode.lastChild;
+			if(targetNode.lastChild.nodeName=="#text"){
+				targetNode.removeChild(delNode);
+			}
+			targetNode.removeChild(delNode); 
+		}
+		
+		//모두 삭제
+		function deleteDivAndP(){
+			targetNode = document.getElementById("root"); 
+			
+			//변수를 새로 지정 --> 길이가지울때마다 바뀌기 때문에 고정하기 위해
+			nod = targetNode.childNodes.length;
+			for (i=0; i<nod; i++){
+				targetNode.removeChild(targetNode.firstChild);
+			}
+		}
+	
+	
+	</script>
 </head>
 <body>
 	<div id="layer"></div>

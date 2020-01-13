@@ -3,6 +3,22 @@
 <html>
 	<head>
 		<title>jquery</title> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="../common/CSS/my_style2.css"/>
+		<script type="text/javascript">
+			//Math.random, Math.floor이용하여 방문자수 카운트
+			$(document).ready(function(){
+				$(".gardenimg").on("mouseover", function(){
+					$(".gardenimg p").remove();
+					count = Math.floor((Math.random()*10)+500).;
+					data = $("<p>방문자수 : "+count+"</p>");
+					$(this).append(data);
+				});
+				$(".gardenimg").on("mouseout", function(){
+					$(".gardenimg p").remove();
+				});
+			});
+		</script>
 	</head> 
 	<body>
 		<div id="header">
